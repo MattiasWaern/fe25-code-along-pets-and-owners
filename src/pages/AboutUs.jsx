@@ -1,3 +1,5 @@
+import Lorem from "../parts/Lorem";
+
 AboutUs.route = {
   path: '/about-us',
   label: 'About us',
@@ -5,5 +7,8 @@ AboutUs.route = {
 };
 
 export default function AboutUs() {
-  return <>About us</>;
+  return <>
+    <h2>About us</h2>
+    <Lorem paragraphCount={3} />
+  </>;
 }

@@ -1,3 +1,5 @@
+import Lorem from "../parts/Lorem";
+
 Start.route = {
   path: '/',
   label: 'Start',
@@ -5,5 +7,8 @@ Start.route = {
 };
 
 export default function Start() {
-  return <>Start</>;
+  return <>
+    <h2>Welcome!</h2>
+    <Lorem paragraphCount={4} />
+  </>;
 }

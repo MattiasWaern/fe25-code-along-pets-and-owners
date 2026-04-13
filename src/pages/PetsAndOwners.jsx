@@ -1,3 +1,5 @@
+import Lorem from "../parts/Lorem";
+
 PetsAndOwners.route = {
   path: '/pets-and-owners',
   label: 'Pets & owners',
@@ -5,5 +7,9 @@ PetsAndOwners.route = {
 };
 
 export default function PetsAndOwners() {
-  return <>Here will show pets and pet owners.</>;
+  return <>
+    <h2>Pets & owners</h2>
+    <p>Here will show pets and pet owners.</p>
+    <Lorem paragraphCount={3} />
+  </>;
 }
