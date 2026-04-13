@@ -5,23 +5,13 @@ import { RouterProvider } from 'react-router/dom';
 import './css/_index.css';
 
 import App from './App';
-import Start from './pages/Start';
-import AboutUs from './pages/AboutUs';
+import routes from './routes';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Start />
-      },
-      {
-        path: '/about-us',
-        element: <AboutUs />
-      }
-    ]
+    children: routes
   }
 ]);
 

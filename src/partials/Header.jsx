@@ -1,3 +1,13 @@
+import routes from '../routes';
+import { NavLink } from 'react-router';
+
 export default function Header() {
-  return <header>Header</header>;
+  return <header>
+    <h1>The Pet Shelter</h1>
+    <nav>
+      {routes.map(({ path, label }) => <NavLink key={path} to={path}>
+        {label}
+      </NavLink>)}
+    </nav>
+  </header>;
 }
