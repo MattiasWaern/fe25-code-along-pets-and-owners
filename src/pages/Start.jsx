@@ -1,4 +1,5 @@
 import Lorem from "../parts/Lorem";
+import HeroImage from "../parts/HeroImage";
 
 Start.route = {
   path: '/',
@@ -8,7 +9,11 @@ Start.route = {
 
 export default function Start() {
   return <>
-    <h2>Welcome!</h2>
+    <HeroImage
+      src="cat.webp"
+      alt="A napping cute cat"
+      heading="Welcome!"
+    />
     <Lorem paragraphCount={4} />
   </>;
 }
