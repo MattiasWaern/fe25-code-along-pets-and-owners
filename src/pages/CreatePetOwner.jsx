@@ -17,8 +17,12 @@ export default function CreatePetOwner() {
   const [formData, setFormData] = useState(formInitialState)
 
   function updateFormData(event) {
-    const { name: key, value } = event.target;
+    //console.log(event)
+    const { name: key, value } = event.target;  // event.target.name == "email"
+    // const key = event.target.name
+    // const value = event.target.value
     // console.log(key, value)
+    // [key] - dynamisk tilldelning av t ex "email" eller "name"
     setFormData({ ...formData, [key]: value })
   }
 
@@ -26,7 +30,12 @@ export default function CreatePetOwner() {
   async function sendForm(event) {
     event.preventDefault()
     // console.log(event)
-    
+    const res = await fetch('/api/petOwners', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    // console.log('sendForm result', res)
 
   }
 
