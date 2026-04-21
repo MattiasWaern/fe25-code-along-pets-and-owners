@@ -65,6 +65,10 @@ export default function CreatePetOwner() {
           Email:
           <input name="email" type="email" placeholder="Email" value={formData.email} onChange={updateFormData} />
         </label>
+        <label>
+          Pets:
+          <input name="pets" type="text" placeholder="Pets" value={formData.pets} onChange={updateFormData} />
+        </label>
         <button type="submit">Create</button>
       </form>
     </>
