@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "start": "concurrently npm:backend npm:dev",
-    "backend": "node backend/index.js",
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "start": "concurrently npm:strapi-dev npm:dev",
+  "strapi-dev": "cd strapi && npm run develop",
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "better-express-store": "^1.0.5",
